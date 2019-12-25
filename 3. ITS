@@ -1,0 +1,15 @@
+# A Practitioner’s Guide To Interrupted Time Series, https://towardsdatascience.com/what-is-the-strongest-quasi-experimental-method-interrupted-time-series-period-f59fe5b00b31
+#1 simulated data 
+# data preparation
+set.seed(1)
+CaseID = rep(1:100,6)
+
+#some intervention
+Intervention = c(rep(0,300), rep(1,300))
+Outcome_Variable = c(rnorm(300), abs(rnorm(300)*4))
+mydata = cbind(CaseID, Intervention, Outcome_Variable)
+mydata = as.data.frame(mydata)
+
+#construct a simple OLS model
+model = lm(Outcome_Variable ~ Intervention, data = mydata)
+summary(model)
