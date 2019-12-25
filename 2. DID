@@ -1,0 +1,24 @@
+# https://towardsdatascience.com/does-minimum-wage-decrease-employment-a-difference-in-differences-approach-cb208ed07327
+d <- read.csv(“wage_data.csv”,convert.factors = FALSE)
+head(d[, c(“ID”, “nj”, “postperiod”, “emptot”)])
+with(d, 
+ (
+ mean(emptot[nj == 1 & postperiod == 1], na.rm = TRUE) — mean(emptot[nj == 1 & postperiod == 0], na.rm = TRUE) 
+ )-
+ (mean(emptot[nj == 0 & postperiod == 1], na.rm = TRUE) — mean(emptot[nj == 0 & postperiod == 0], na.rm = TRUE)
+ )
+)
+ols <- lm(emptot ~ postperiod * nj, data = d)
+coeftest(ols)
+
+
+#A set of estimators and tests for panel data econometrics
+library(plm)
+library(lmtest)
+d$Dit <- d$nj * d$postperiod
+d <- plm.data(d, indexes = c("ID", "postperiod"))
+did.reg <- plm(emptot ~ postperiod + Dit, data = d,model = "within")
+coeftest(did.reg, vcov=function(x)
+
+#Heteroskedasticity-Consistent Covariance Matrix Estimation
+vcovHC(x, cluster="group", type="HC1"))
