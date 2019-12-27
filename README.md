@@ -1,4 +1,5 @@
-# Project Summary: Causal-Inference-for-Quasi-Experimental-Methods
+# Project Summary
+
 This repository includes the most popular quasi-experimental designs for causal inference. I've put code examples and the links to the original posts. Please combine the both to have a better understanding of the underlying design ideology. 
 
 ## Quasi-experimental Methods
@@ -12,7 +13,9 @@ This repository includes the most popular quasi-experimental designs for causal 
 
 ## About the Author
 
-Leihua Ye is a Ph.D. researcher at the UC, Santa Barbara. His research interests include public opinion and behavior, research design, big data, and machine learning.
+Leihua Ye is a Ph.D. Researcher at the UC, Santa Barbara. He has received extensive trainings in Causal Inference, Research Design, Machine Learning, Big Data, and Machine Learning. 
+
+He receives his B.A. and M.A. from the Uni. of Nottingham. 
 
 ## Contact
 
