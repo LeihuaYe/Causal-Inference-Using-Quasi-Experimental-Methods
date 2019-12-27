@@ -1,6 +1,6 @@
 # Project Summary
 
-This repository includes the most popular quasi-experimental designs for causal inference. I've put code examples and the links to the original posts. Please combine the both to have a better understanding of the underlying design ideology. 
+This repository includes the most popular quasi-experimental designs for causal inference. I've put code examples and the links to the original posts. Please combine both to have a better understanding of the underlying design ideology. 
 
 ## Quasi-experimental Methods
 1. Regression Discontinuity Design: The Crown Jewel of Causal Inference, https://towardsdatascience.com/the-crown-jewel-of-causal-inference-regression-discontinuity-design-rdd-bad37a68e786
