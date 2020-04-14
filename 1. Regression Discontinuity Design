@@ -1,12 +1,15 @@
 # #setwd(“/Users/andy/desktop”)
-# the post is available at https://towardsdatascience.com/the-crown-jewel-of-causal-inference-regression-discontinuity-design-rdd-bad37a68e786
-#generate a sample data
-#cutoff point = 3.5
+# original post: https://towardsdatascience.com/the-crown-jewel-of-causal-inference-regression-discontinuity-design-rdd-bad37a68e786
+# We are going to use simulated data to examine the treatment effect of an exogenous condition. The research question is whether receiving a scholarship would help students succeed in future professional success. 
+
+#To generate a sample data, adn we set the cutoff point = 3.5
+
 GPA <- runif(1000, 0, 4)
 future_success <- 10 + 2 * GPA + 10 * (GPA>=3.5) + rnorm(1000)
 
 #install and load the package ‘rddtools’
 #install.packages(“rddtools”)
+
 library(rddtools)
 data <- rdd_data(future_success, GPA, cutpoint = 3.5)
 
