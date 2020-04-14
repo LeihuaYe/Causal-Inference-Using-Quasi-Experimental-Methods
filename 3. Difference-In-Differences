@@ -1,4 +1,7 @@
-# https://towardsdatascience.com/does-minimum-wage-decrease-employment-a-difference-in-differences-approach-cb208ed07327
+# Original post: https://towardsdatascience.com/does-minimum-wage-decrease-employment-a-difference-in-differences-approach-cb208ed07327
+# by carefully selecting cases in the experimental groups, it is possible to detect the treatment effect even handling with obervational data. 
+# Difference-in-Differences, DID, is one of the most established methods of causal inference.
+
 d <- read.csv(“wage_data.csv”,convert.factors = FALSE)
 head(d[, c(“ID”, “nj”, “postperiod”, “emptot”)])
 with(d, 
@@ -11,8 +14,7 @@ with(d,
 ols <- lm(emptot ~ postperiod * nj, data = d)
 coeftest(ols)
 
-
-#A set of estimators and tests for panel data econometrics
+#A set of estimators and tests for panel data 
 library(plm)
 library(lmtest)
 d$Dit <- d$nj * d$postperiod
