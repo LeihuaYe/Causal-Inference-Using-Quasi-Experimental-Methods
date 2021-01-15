@@ -37,4 +37,4 @@ Email: yeleihua@gmail.com
 
 LinkedIn: www.linkedin.com/in/leihuaye
 
-Tech Blog: https://medium.com/@leihua_ye
+Tech Blog: https://leihua-ye.medium.com
